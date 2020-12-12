@@ -1,6 +1,5 @@
 class Llogaria
-	attr_writer :fjalekalimi
-	attr_accessor :username, :roli, :person
+	attr_accessor :username, :fjalekalimi, :roli, :person
 	def initialize(username, fjalekalimi, roli, person)
 		@username = username
 		@fjalekalimi = fjalekalimi

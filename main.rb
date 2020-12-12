@@ -7,6 +7,7 @@ require_relative "models/rafti"
 require_relative "models/rendi"
 require_relative "data/perdoruesit"
 
+
 STDOUT.sync = true
 
 =begin  
@@ -22,10 +23,13 @@ def logohu
 	puts "Jepni fjalëkalimin:"
 	fjalekalimi = gets.chomp
 
-	# wip
-	if username == "admin" && fjalekalimi == "admin"
+	$index = $perdoruesit.kerko(username)
+
+	if $index != false && $perdoruesit.kontrollo_passin($index, fjalekalimi)
+		puts "U krye llogimi me sukses!"
 		$logged = true
 	else 
+		puts "Kredencialet tuaja jane gabim!"
 		$logged = false
 	end
 end
@@ -35,6 +39,7 @@ end
 	duke i lënë të zbrazëta dhe si pasojë ndalon çasjen e programit në vazhdim. 
 =end 
 def clogohu 
+	puts "Jeni çloguar!"
 	$logged = false 
 end
 
@@ -43,15 +48,27 @@ end
 	një objekt i llogarisë dhe një rol. Nëse roli që ka objekti i llogarisë është i njejtë me rolin e
 	dhënë kthehet true, në të kundërtën kthehet false. 
 =end
-def kontrollo_rolin llogaria, roli
-	# to do
+def kontrollo_rolin roli_adekuat
+	roli_aktual = $perdoruesit.gjej_rolin($index)
+	if roli_aktual == roli_adekuat
+		return true
+	else 
+		return false
+	end
 end
 
+
+# ========== main =========
+
+
 while true
-	# logohu
+	logohu
 	while $logged
-		# to do 
+		puts "Roli i fiones eshte bibliotekiste"
+		puts kontrollo_rolin(1)
+
+		puts $test 
 		
-		# clogohu
+		clogohu
 	end
 end

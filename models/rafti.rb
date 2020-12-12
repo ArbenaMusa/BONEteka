@@ -25,21 +25,3 @@ class Rafti
 		end
 	end
 end
-
-rafti = Rafti.new("1", "1", 10)
-
-puts rafti
-
-rafti.shto_rendin("2")
-rafti.shto_rendin("3")
-rafti.shto_rendin("4")
-rafti.shto_rendin("5")
-rafti.shto_rendin("6")
-rafti.shto_rendin("7")
-puts rafti
-rafti.shto_rendin("8")
-rafti.shto_rendin("9")
-rafti.shto_rendin("10")
-rafti.shto_rendin("11")
-rafti.shto_rendin("12")
-puts rafti

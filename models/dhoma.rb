@@ -45,6 +45,3 @@ class Dhoma
 
 
 end
-klasa=Dhoma.new(3,4)
-klasa.shto_raftin("fd")
-puts klasa

@@ -46,6 +46,3 @@ class Bibloteka
 
 
 end
-klasa=Bibloteka.new("......","Rr.Isa Kastrati",3,4)
-klasa.shto_dhomen("fd")
-puts klasa

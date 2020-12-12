@@ -20,8 +20,5 @@ class Person
 	end
 	def to_s
 		"Te dhenat e personit jane: Emri:#{@emri},Mbiemri:#{@mbiemri}, Ditelindja: #{@ditelindja}, Numri personal: #{@nr_personal}, vendbanimi: #{@vendbanimi}, Numri telefonit: #{@numri_tel}"
-
 	end
 end
-	klasa=Person.new("Armir","Zogu","19.02.1997","1241896648","Prishtine","44958107")
-	puts klasa
