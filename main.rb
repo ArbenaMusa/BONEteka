@@ -64,10 +64,60 @@ end
 while true
 	logohu
 	while $logged
-		puts "Roli i fiones eshte bibliotekiste"
-		puts kontrollo_rolin(1)
+		puts "Cfare deshironi te beni(shto_libra,shto_rende,shto_dhome apo bibloteka"
+		choose=gets.chomp
+		case choose
+			when "shto_libra"
+				if kontrollo_rolin(0) 
+					puts"Ju lutem shkruani titullin"
+					titulli=gets.chomp
 
-		puts $test 
+					puts"Ju lutem shkruani autorin"
+					autori=gets.chomp
+
+					puts"Ju lutem shkruani vitin e botimit"
+					viti=gets.chomp
+
+					puts"Ju lutem shkruani numrin e faqeve"
+					numri=gets.chomp.to_i
+					libri=Libri.new(titulli,autori,viti,numri)
+				else
+					puts"Ju nuk keni te drejte"
+				end
+			when "shto_rende"
+				if kontrollo_rolin(0)
+
+					puts"Ju lutem shkruani id e rendit"
+					rend=gets.chomp
+
+					puts"Ju lutem shkruani id raft"
+					raft=gets.chomp
+
+					puts"Ju lutem shkruani numri dhomes"
+					numri=gets.chomp.to_i
+					rend=Rendi.new(rend,raft,numri)
+				else
+					puts"Ju nuk keni te drejte"
+				end
+			when "shto_dhome"
+				if kontrollo_rolin(1)
+					puts"Ju lutem shkruani id e dhomes"
+					id=gets.chomp.to_i
+
+					puts"Ju lutem shkruani numrin maksimal"
+					nr=gets.chomp.to_i
+					dhoma=Dhoma.new(id,nr)
+				else
+					puts"Ju nuk keni te drejte"
+				end
+		else
+			puts"Keni dhene format te gabuar"
+		end
+		
+
+		
+
+		
 		
 		clogohu
 	end
