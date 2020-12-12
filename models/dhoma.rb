@@ -13,7 +13,7 @@
 	e cila ka vend të zbrazët.”. Të mbishkuhet metoda to_s e cila jep karakteristikat e dhomës
 	përkatëse. 
 =end
-STDOUT.sync=true
+
 class Dhoma
 	
 	def initialize(id,nr_max)

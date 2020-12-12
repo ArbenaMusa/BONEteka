@@ -12,7 +12,7 @@
 	ekran “Biblioteka nuk ka dhoma të lira të cilat mund t’i shfrytëzoni momentalisht.”. Të mbishkruhet
 	metoda to_s e cila jep karakteristikat e bibliotekës përkatëse. 
 =end
-STDOUT.sync=true
+
 class Bibloteka
 	
 	def initialize(emri,adresa,id,nr_max)

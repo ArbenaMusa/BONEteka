@@ -1,6 +1,11 @@
-=begin
-Të krijohet klasa Libri objekteve të së cilës sapo të inicializohen ju jepet titulli, autori, viti i botimit, shtepia botuese, numri i faqeve. Të konsiderohet që viti i botimit dhe shtëpia botuese janë parametra jo të domosdoshëm dhe në rastet kur nuk nuk jepen nga përdoruesi vlera e etyre të paracaktohet si nil. Titulli dhe autori nuk duhet të kenë mundësi të ndryshohen por vetëm të lexohen, ndërsa viti i botimit, shtepia botuese dhe numri i faqeve duhet të kenë mundësi të ndryshohen dhe të 
-të lexohet përmes attr_accessor. Poashtu të shkruhet metoda update e cila i ndryshon keto të dhëna njëherësh.
+=begin 
+	Të krijohet klasa Libri objekteve të së cilës sapo të inicializohen ju jepet titulli, autori,
+	viti i botimit,  shtepia botuese, numri i faqeve. Të konsiderohet që viti i botimit dhe shtëpia
+	botuese janë parametra jo të  domosdoshëm dhe në rastet kur nuk nuk jepen nga përdoruesi vlera e
+	etyre të paracaktohet si nil. Titulli dhe  autori nuk duhet të kenë mundësi të ndryshohen por vetëm
+	të lexohen, ndërsa viti i botimit, shtepia botuese  dhe numri i faqeve duhet të kenë mundësi të
+	ndryshohen dhe të  të lexohet përmes attr_accessor. Poashtu të shkruhet metoda update e cila i
+	ndryshon keto të dhëna njëherësh. 
 =end
 
 class Libri

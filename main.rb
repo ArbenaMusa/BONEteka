@@ -24,7 +24,7 @@ def logohu
 	fjalekalimi = gets.chomp
 
 	$index = $perdoruesit.kerko(username)
-
+	puts $index
 	if $index != false && $perdoruesit.kontrollo_passin($index, fjalekalimi)
 		puts "U krye llogimi me sukses!"
 		$logged = true
