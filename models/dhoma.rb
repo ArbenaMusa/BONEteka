@@ -13,3 +13,38 @@
 	e cila ka vend të zbrazët.”. Të mbishkuhet metoda to_s e cila jep karakteristikat e dhomës
 	përkatëse. 
 =end
+STDOUT.sync=true
+class Dhoma
+	
+	def initialize(id,nr_max)
+		@id=id
+		@nr_max=nr_max
+		@array=[]
+		@nr_rafteve=0
+	end
+	def to_s
+		"Dhoma ka kete id(#{@id}) dhe kete numer maksimal(#{@nr_max}) te rafteve"
+
+	end
+		
+	def shto
+		@nr_rafteve=@nr_rafteve+1
+
+	end
+	def shto_raftin(raft)
+		if @nr_rafteve <= @nr_max
+			@array.append(raft)
+			shto()
+			puts"Rafti është vendosur me sukses në dhomë!"
+		else
+			puts "Nuk ka hapësirë të mjaftueshme për të vendosur raftin në dhomë. Provoni ta shtoni në ndonjë dhomë tjetër e cila ka vend të zbrazët."
+
+		end
+
+	end
+
+
+end
+klasa=Dhoma.new(3,4)
+klasa.shto_raftin("fd")
+puts klasa

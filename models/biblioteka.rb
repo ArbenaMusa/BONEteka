@@ -12,3 +12,40 @@
 	ekran “Biblioteka nuk ka dhoma të lira të cilat mund t’i shfrytëzoni momentalisht.”. Të mbishkruhet
 	metoda to_s e cila jep karakteristikat e bibliotekës përkatëse. 
 =end
+STDOUT.sync=true
+class Bibloteka
+	
+	def initialize(emri,adresa,id,nr_max)
+		@id=id
+		@nr_max=nr_max
+		@emri=emri
+		@adresa=adresa
+		@array=[]
+		@nr_dhomave=0
+	end
+	def to_s
+		"Dhoma ka kete emer:#{@emri}, kete adrese: #{@adresa},kete id te stafit:#{@id} dhe #{@nr_max} dhoma"
+
+	end
+		
+	def shto
+		@nr_dhomave=@nr_dhomave+1
+
+	end
+	def shto_dhomen(dhome)
+		if @nr_dhomave <= @nr_max
+			@array.append(dhome)
+			shto()
+			puts"Dhoma munde te perdoret!"
+		else
+			puts "Nuk ka hapësirë të mjaftueshme për të vendosur dhomen në biblotek"
+
+		end
+
+	end
+
+
+end
+klasa=Bibloteka.new("......","Rr.Isa Kastrati",3,4)
+klasa.shto_dhomen("fd")
+puts klasa
