@@ -64,7 +64,7 @@ end
 while true
 	logohu
 	while $logged
-		puts "Cfare deshironi te beni(shto_libra,shto_rende,shto_dhome apo bibloteka"
+		puts "Cfare deshironi te beni(shto_libra,shto_rende,shto_rafte,shto_dhome apo bibloteka"
 		choose=gets.chomp
 		case choose
 			when "shto_libra"
@@ -99,6 +99,21 @@ while true
 				else
 					puts"Ju nuk keni te drejte"
 				end
+			when "shto_rafte"
+				if kontrollo_rolin(0)
+
+					puts"Ju lutem shkruani id e raftit"
+					id=gets.chomp.to_i
+
+					puts"Ju lutem shkruani numrin e dhomes"
+					dhome=gets.chomp.to_i
+
+					puts"Ju lutem shkruani numrin e rendeve"
+					numri=gets.chomp.to_i
+					rafti=Rafti.new(id,dhome,numri)
+				else
+					puts"Ju nuk keni te drejte"
+				end
 			when "shto_dhome"
 				if kontrollo_rolin(1)
 					puts"Ju lutem shkruani id e dhomes"
@@ -107,6 +122,22 @@ while true
 					puts"Ju lutem shkruani numrin maksimal"
 					nr=gets.chomp.to_i
 					dhoma=Dhoma.new(id,nr)
+				else
+					puts"Ju nuk keni te drejte"
+				end
+			when "shto_bibloteke"
+				if kontrollo_rolin(1)
+					puts"Ju lutem shkruani emrin e biblotekes"
+					emri=gets.chomp
+
+					puts"Ju lutem shkruani adresen"
+					adresa=gets.chomp
+					puts"Ju lutem shkruani id e biblotekes"
+					id=gets.chomp.to_i
+
+					puts"Ju lutem shkruani numrin maksimal"
+					nr=gets.chomp.to_i
+					bibloteka=Bibloteka.new(emri,adresa,id,nr)
 				else
 					puts"Ju nuk keni te drejte"
 				end
