@@ -30,7 +30,7 @@ class Perdoruesit
 
 	def kerko username
 		for index in 0...@lista_e_llogarive.length
-			if @lista_e_llogarive[index].username == "fiona"
+			if @lista_e_llogarive[index].username == username
 				return index
 			end
 		end
